@@ -1,0 +1,42 @@
+:root{
+  --rvr-launcher-background:var(--default-primary-color,#03a9f4);
+  --rvr-launcher-hover-background:var(--dark-primary-color, #0277bd);
+  --rvr-launcher-active-background:var(--accent-color, #4caf50);
+  --rvr-launcher-color: var(--text-primary-color,#fff);
+}
+.RVRlauncher {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background: var(--rvr-launcher-background);
+  width:48px;
+  height:48px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  &>span{
+    display: block;
+    font-family: sans-serif !important;
+    font-size: 9px !important;
+    text-align:center !important;
+    font-weight: bold;
+    position: relative;
+    bottom: -8px;
+    left:-1px;
+  }
+  &>span, &>svg{
+    color: var(--rvr-launcher-color);
+    fill: var(--rvr-launcher-color);
+
+  }
+  &:active,
+  &:visited,
+  &:focus{
+    background: var(--rvr-launcher-active-background);
+  }
+  &:hover{
+    background: var(--rvr-launcher-hover-background);
+  }
+}
